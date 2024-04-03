@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tac+One&display=swap");
+* {
+  font-family: "Oswald", sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none !important;
+  outline: none;
+  border: none;
+  transition: all 0.3s linear;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: #000;
+}
+html::-webkit-scrollbar-thumb {
+  background: #0cc9eb;
+  border-radius: 0.5rem;
+}
+
+section {
+  padding: 5rem 20%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 20%;
+  z-index: 1000;
+  background: transparent;
+}
+.header.active {
+  background: #000;
+}
+.header .logo {
+  flex: 1 1 22rem;
+}
+.header .logo a img {
+  width: 30%;
+}
+.header .navbar {
+  flex: 1 1 42rem;
+  text-align: right;
+}
+.header .navbar a {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.header .navbar a:hover {
+  color: #0cc9eb;
+  -webkit-text-decoration: overline #0cc9eb !important;
+          text-decoration: overline #0cc9eb !important;
+}
+.header #menu-btn {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.home {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.home .flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  z-index: 10;
+  padding: 5rem 20%;
+}
+.home .flex .content {
+  flex: 1 1 42rem;
+  text-align: center;
+  font-family: "Tac One", sans-serif;
+}
+.home .flex .content h4 {
+  font-size: 1.5rem;
+  color: #0cc9eb;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+.home .flex .content h3 {
+  font-size: 7rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Tac One", sans-serif !important;
+  letter-spacing: 0.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+.home .flex .content .btn-main {
+  padding: 1.2rem 1.6rem;
+  font-size: 2rem;
+  color: #000;
+  background: transparent;
+  background: #fff;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  border-radius: 0.8rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  display: inline-block;
+}
+.home .flex .content .btn-main:hover {
+  letter-spacing: 0.3rem;
+  color: #0cc9eb;
+  background: transparent;
+}
+.home .flex .image {
+  flex: 1 1 42rem;
+  text-align: left;
+}
+.home .flex .image img {
+  width: 130%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  image-rendering: optimizeSpeed;
+}
+
+.stats .bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+.stats .bg-video video {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.stats .box-container {
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  gap: 3rem;
+  text-align: center;
+}
+.stats .box-container .box {
+  background: transparent;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.stats .box-container .box:hover {
+  background: #fff;
+  opacity: 0.4;
+}
+.stats .box-container .box:hover h3 {
+  color: #000;
+}
+.stats .box-container .box:hover p {
+  color: #000;
+}
+.stats .box-container .box i {
+  font-size: 3rem;
+  color: #0cc9eb;
+}
+.stats .box-container .box h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+.stats .box-container .box p {
+  font-size: 1.5rem;
+  color: rgb(182, 182, 182);
+  padding: 1.5rem 0;
+  line-height: 1.5;
+}
+.stats .box-container .box p span {
+  color: #0cc9eb;
+}
+
+@media (max-width: 1460px) {
+  .home .flex .content h3 {
+    font-size: 5rem;
+  }
+  .stats .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+  }
+}
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem 10%;
+  }
+  .home .flex .content h4 {
+    letter-spacing: 0.1rem;
+  }
+  .home .flex .content h3 {
+    font-size: 3.5rem;
+  }
+  .home .flex .content .btn-main {
+    font-size: 1.3rem;
+  }
+  .stats {
+    padding: 5rem 10%;
+  }
+  .stats .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 771px) {
+  .header {
+    background: #000;
+  }
+  .header #menu-btn {
+    display: inline-block !important;
+  }
+  .header #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #000;
+    text-align: center;
+    height: 88.5vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+  .home .flex {
+    flex-wrap: wrap;
+    gap: 5rem;
+    position: relative;
+  }
+  .home .flex .content h4 {
+    letter-spacing: 0.1rem;
+  }
+  .home .flex .content h3 {
+    font-size: 3.5rem;
+  }
+  .home .flex .content .btn-main {
+    font-size: 1.3rem;
+  }
+  .home .flex .image {
+    margin-top: 8rem;
+  }
+  .home .flex .image img {
+    width: 100%;
+    position: absolute;
+    bottom: -40%;
+    left: -20%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .header .logo a img {
+    width: 50%;
+  }
+  .home .flex {
+    flex-wrap: wrap;
+    gap: 5rem;
+    position: relative;
+  }
+  .home .flex .content h4 {
+    letter-spacing: 0.1rem;
+  }
+  .home .flex .content h3 {
+    font-size: 3.5rem;
+  }
+  .home .flex .content .btn-main {
+    font-size: 1.3rem;
+  }
+  .home .flex .image {
+    margin-top: 3rem;
+  }
+  .home .flex .image img {
+    width: 100%;
+    position: absolute;
+    bottom: -40%;
+    left: -20%;
+  }
+  .stats .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
